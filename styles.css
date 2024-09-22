@@ -1,0 +1,185 @@
+:root {
+    font-family: "Open Sans", sans-serif;
+    background-color: #78b5cf;
+    color: white;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("./img/25501.jpg");
+    background-size: cover;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#city,
+#temperature,
+#wind,
+#conditions,
+#range {
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.unit-button{
+    padding: 15px 30px 0px 0px;
+}
+
+#form {
+    padding: 30px;
+    width: 450px;
+}
+
+.error {
+    visibility: hidden;
+}
+
+#form input[type="text"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 0;
+    background-color: #f7f7f7;
+    font-size: 1rem;
+    outline: 0;
+    border-radius: 30px;
+    background-image: url('./img/searchicon.png');
+    background-size: 10%;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 20px 20px 20px 60px;
+}
+
+#form input::placeholder {
+    color: #ccc;
+}
+
+.error {
+    padding-left: 30px;
+    color: red;
+}
+
+#city {
+    font-size: 80px;
+    font-weight: lighter;
+}
+
+#temperature {
+    font-size: 200px;
+    font-weight: bold;
+    padding: 60px;
+}
+
+#range,
+#conditions,
+#wind {
+    font-size: 50px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+    border: none;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px) translateY(-50%);
+    -ms-transform: translateX(26px) translateY(-50%);
+    transform: translateX(26px) translateY(-50%);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.fade-in {
+  animation: fadeIn 2.0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+  }
+}

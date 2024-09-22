@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="header">
+            <form id="form" action="/" method="GET">
+                <input type="text" id="input-city" placeholder="Search City">
+            </form>
+
+            <div class="unit-button">
+                <div class="units">Metric / US</div>
+                <div class="button">
+                    <label class="switch">
+                        <input type="checkbox" id="unitToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="error">Error: Location doesn't exist!</div>
+        <div class="info" id="city">City</div>
+        <div class="info" id="temperature">Temperature</div>
+        <div class="info" id="conditions">Conditions</div>
+        <div class="info" id="range">Range</div>
+        <div class="info" id="wind">Wind</div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
